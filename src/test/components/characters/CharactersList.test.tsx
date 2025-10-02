@@ -9,7 +9,7 @@ it('loads list and paginates', async () => {
 
   // Wait for loading to complete - Loading should disappear
   await waitFor(() => {
-    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('loading-spinner')).not.toBeInTheDocument();
   });
 
   expect(screen.getByText('Characters')).toBeInTheDocument();
@@ -23,7 +23,7 @@ it('filters by name when typing', async () => {
 
   // Wait for initial loading to complete
   await waitFor(() => {
-    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('loading-spinner')).not.toBeInTheDocument();
   });
 
   const input = screen.getByLabelText('Search by name');
@@ -31,7 +31,7 @@ it('filters by name when typing', async () => {
 
   // Wait for loading to complete after filtering
   await waitFor(() => {
-    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('loading-spinner')).not.toBeInTheDocument();
   });
 
   await waitFor(() => {
