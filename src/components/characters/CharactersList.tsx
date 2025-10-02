@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Box, Container, Grid, Pagination, Stack, TextField, Typography } from '@mui/material';
-import { useGetCharactersQuery } from '../../services/rickAndMortyApi';
+import { useGetCharactersQuery } from '@/services/rickAndMortyApi';
 import CharacterCard from './CharacterCard';
 
 export default function CharactersList() {
@@ -14,6 +14,8 @@ export default function CharactersList() {
   const { data, isFetching, isError, error } = useGetCharactersQuery({ page, name: search || undefined });
 
   const totalPages = useMemo(() => data?.info.pages ?? 1, [data]);
+
+  if (isFetching) return <Typography>Loading...</Typography>;
 
   return (
     <Container sx={{ py: 4 }}>

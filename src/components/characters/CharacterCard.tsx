@@ -1,6 +1,6 @@
 import { Card, CardActionArea, CardContent, CardMedia, Chip, Stack, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import type { Character } from '../../types';
+import type { Character } from '@/types';
 
 const chipStyle = {
   marginLeft: 0,

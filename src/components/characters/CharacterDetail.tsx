@@ -1,6 +1,6 @@
 import { Container, Stack, Typography, Chip, Card, CardMedia, CardContent, Button } from '@mui/material';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useGetCharacterByIdQuery } from '../../services/rickAndMortyApi';
+import { useGetCharacterByIdQuery } from '@/services/rickAndMortyApi';
 
 export default function CharacterDetail() {
   const { id } = useParams<{ id: string }>();

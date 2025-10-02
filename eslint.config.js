@@ -35,7 +35,6 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
-      // Современные правила для отступов и табуляции
       '@stylistic/indent': ['error', 2],
       '@stylistic/no-mixed-spaces-and-tabs': 'error',
       '@stylistic/no-trailing-spaces': 'error',
